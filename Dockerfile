@@ -1,4 +1,4 @@
-FROM php:7.1-apache
+FROM php:7.0-apache
 
 # apt-get install php dependency
 RUN apt-get update \
@@ -36,8 +36,6 @@ WORKDIR /app
 # composer install first
 #COPY ./composer.json /app/
 #COPY ./composer.lock /app/
-
-# install with no code
 #RUN composer install  --no-autoloader --no-scripts
 
 # copy project
@@ -45,4 +43,4 @@ COPY . /app
 
 RUN composer install \
     && chown -R www-data:www-data /app \
-    # && chmod -R 0777 /app/storage
+    # && chmod -R 0777 /app/storge
