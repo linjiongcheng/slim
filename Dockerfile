@@ -1,4 +1,4 @@
-FROM php:7.0-apache
+FROM php:7.1-apache
 
 # apt-get install php dependency
 RUN apt-get update \
